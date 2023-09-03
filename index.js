@@ -13,7 +13,7 @@ const saveNotes = () => {
     )
     
 console.log(data[data.length-1],data);
-fetch("http://localhost:3000/",{
+fetch("https://minernova.github.io/notes-app/",{
     method:"POST",
     headers:{
         "Content-Type": "application/json"
@@ -57,7 +57,7 @@ const addNote = (text = "",id) => {
     "click",
     function (e) {
         console.log(e,e.target,e.target.id)
-        fetch("http://localhost:3000/delete",{
+        fetch("https://minernova.github.io/notes-app/delete",{
     method:"POST",
     headers:{
         "Content-Type": "application/json"
@@ -110,7 +110,7 @@ const addNote = (text = "",id) => {
 // })
 
 
-fetch("http://localhost:3000/").then((data)=>{
+fetch("https://minernova.github.io/notes-app/").then((data)=>{
     return data.json();
 }).then((data)=>{
     addFetchedNotes(data)
